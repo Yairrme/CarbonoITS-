@@ -4,102 +4,102 @@
     <meta charset="UTF-8" />
     <title>Huella de Carbono</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
   </head>
-  <body class="bg-gray-50">
+  <body class="bg-gray-50 font-sans text-gray-800">
     <!-- Barra de navegación -->
-    <nav class="bg-orange-800 text-white">
-      <div
-        class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center"
+    <header class="bg-blue-700 text-white shadow">
+      <nav
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+        aria-label="Principal"
       >
-        <h1 class="font-bold text-lg text-green-500">🌍 CarbonoITS</h1>
-        <ul class="flex space-x-6 text-sm">
+        <h1 class="text-xl font-bold text-green-400 flex items-center gap-2">
+          🌍 <span>CarbonoITS</span>
+        </h1>
+        <ul class="flex space-x-6">
           <li>
             <a
               href="#"
-              class="text-green-500 hover:underline font-bold text-lg"
+              class="hover:underline text-green-400 font-medium transition"
             >
               ¿Quiénes somos?
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- Contenido principal -->
     <main
-      class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6"
+      class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8"
     >
       <!-- Columna izquierda (texto principal) -->
-      <div class="md:col-span-2 space-y-6">
+      <section class="md:col-span-2 space-y-8">
         <!-- Caja destacada -->
-        <div class="bg-white rounded-lg shadow p-6">
-          <h2 class="font-bold text-lg text-purple-900 mb-2">
+        <div class="bg-white rounded-2xl shadow-md p-6">
+          <h2 class="font-bold text-xl text-purple-900 mb-3">
             ¿Qué es la huella de carbono? Aprende a calcularla y reducirla
           </h2>
-          <p class="text-gray-700">
+          <p class="text-gray-700 leading-relaxed">
             La huella de carbono es un indicador ambiental que mide la cantidad
             de gases de efecto invernadero (GEI) emitidos directa o
             indirectamente por una persona, organización, evento o producto.
           </p>
           <button
-            class="mt-4 bg-green-500 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition"
+            class="mt-5 bg-green-500 text-white px-6 py-2 rounded-xl hover:bg-green-600 transition shadow"
           >
             Solicita información
           </button>
         </div>
 
         <!-- Artículo -->
-        <article class="bg-white rounded-lg shadow p-6">
-          <h1 class="text-2xl font-bold text-gray-900 mb-4">
+        <article class="bg-white rounded-2xl shadow-md p-6">
+          <h2 class="font-bold text-xl text-purple-900 mb-3">
             Calcula tu huella de carbono y compara el impacto de tus decisiones
             de transporte
-          </h1>
+          </h2>
 
           <div class="flex flex-wrap gap-4">
             <button
-              class="bg-green-500 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition"
+              class="bg-green-500 text-white px-6 py-2 rounded-xl hover:bg-green-600 transition shadow"
             >
               Calcular mi huella
             </button>
             <button
-              class="bg-green-500 text-white px-5 py-2 rounded-lg hover:bg-blue-800 transition"
+              class="bg-green-500 text-white px-6 py-2 rounded-xl hover:bg-green-600 transition shadow"
             >
               Descubrir mi impacto
             </button>
           </div>
         </article>
-      </div>
+      </section>
 
       <!-- Columna derecha (resumen con imágenes) -->
-      <aside class="space-y-4">
-        <div class="bg-white rounded-lg shadow p-6">
-          <h3 class="font-bold text-gray-900 mb-4">Resumen :</h3>
+      <aside>
+        <div class="bg-white rounded-2xl shadow-md p-6">
+          <h3 class="font-bold text-lg text-gray-900 mb-5">Resumen</h3>
 
           <!-- Contenedor flex de imágenes -->
-          <div class="flex flex-wrap gap-4 justify-center">
-            <img
-              src="/images/Captura de pantalla 2025-08-28 013423.png"
-              alt="Imagen 1"
-              class="w-36 h-36 object-cover rounded-lg shadow"
-            />
-            <img
-              src="/images/Captura de pantalla 2025-08-30 175435.png"
-              alt="Imagen 2"
-              class="w-36 h-36 object-cover rounded-lg shadow"
-            />
-            <img
-              src="/images/Captura de pantalla 2025-08-30 175450.png"
-              alt="Imagen 3"
-              class="w-36 h-36 object-cover rounded-lg shadow"
-            />
-            <img
-              src="/images/Captura de pantalla 2025-08-30 175504.png"
-              alt="Imagen 4"
-              class="w-36 h-36 object-cover rounded-lg shadow"
-            />
+          <div class="grid grid-cols-2 gap-4">
+             
+          <img src="images\Captura de pantalla 2025-08-28 013423.png" 
+               alt="Imagen 1" class="w-36 h-36 object-cover rounded-lg shadow">
+          <img src="images\Captura de pantalla 2025-08-30 175435.png" 
+               alt="Imagen 2" class="w-36 h-36 object-cover rounded-lg shadow">
+          <img src="images\Captura de pantalla 2025-08-30 175450.png" 
+               alt="Imagen 3" class="w-36 h-36 object-cover rounded-lg shadow">
+          <img src="images\Captura de pantalla 2025-08-30 175504.png" 
+               alt="Imagen 4" class="w-36 h-36 object-cover rounded-lg shadow">
+          
           </div>
         </div>
       </aside>
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-center py-4 mt-10 text-sm text-green-400">
+      © 2025 CarbonoITS — Todos los derechos reservados -Instituto Tecnico Cipolletti
+    </footer>
   </body>
 </html>
