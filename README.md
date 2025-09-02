@@ -1,5 +1,7 @@
 # CarbonoITS-
-¿Qué es la huella de carbono personal?
+
+## ¿Qué es la huella de carbono personal?
+
 La huella de carbono personal se refiere a la cantidad total de emisiones de gases de efecto invernadero (principalmente dióxido de carbono, pero también metano y óxido nitroso) que se generan por las actividades cotidianas de una persona.
 
 Estas actividades pueden incluir el consumo de energía en el hogar, el transporte, la alimentación, la ropa, los productos de consumo y otros aspectos de la vida diaria.
@@ -7,22 +9,38 @@ Conocer nuestra huella puede ayudarnos a comprender mejor nuestras propias accio
 
 Librerías, documentación y fuentes usadas para el desarrollo
 
-Descripcion Del Proyecto
+## Descripción del proyecto
+
 Desarrollar una aplicación web sencilla que permita a un usuario calcular de manera básica su huella de carbono personal y un apartado para comparar el impacto de ir al trabajo en coche vs. en transporte público (o bicicleta). mostrando la cantidad de CO2 que se ahorra al elegir el transporte público o la bicicleta en lugar del coche.
 
-Capturas de pantalla.
+## Capturas de pantalla
 
-Pasos de instalación y ejecución.
+![Formulario](images/Formulario.png)
+![Resultado](images/Resultado.png)
+![Visual de la pagina](images/Pagina.png)
 
-Fragmentos de código clave explicados.
+## Instalación y ejecución
 
-Referencias utilizadas
+1. Clonar el repositorio: `git clone <repo-url>`
+2. Abrir `index.html` en navegador.
+3. Opcional: usar Live Server en VSCode para refresco automático.
+
+## Uso
+
+- Completar el formulario con tus hábitos.
+- Presionar "Calcular" para ver tu huella.
+- Reiniciar o volver al contenido principal si lo deseas.
+
+## Fragmentos de código clave
+
+## Referencias
+
 https://www.nationalgeographicla.com/medio-ambiente/que-es-huella-de-carbono-como-se-mide
 https://atlas-greenenergy.com/es/que-es-la-huella-de-carbono-personal
 
 Licencia MIT
 
-Copyright (c) [2025] 
+Copyright (c) [2025]
 [Yair Melinguer,Lucas Duran,Franco Seguel]
 
 Por la presente se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia
