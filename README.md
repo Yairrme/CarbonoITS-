@@ -7,7 +7,7 @@ La huella de carbono personal se refiere a la cantidad total de emisiones de gas
 Estas actividades pueden incluir el consumo de energía en el hogar, el transporte, la alimentación, la ropa, los productos de consumo y otros aspectos de la vida diaria.
 Conocer nuestra huella puede ayudarnos a comprender mejor nuestras propias acciones y hábitos y a tomar medidas para reducir nuestras emisiones y minimizar nuestro impacto en el medio ambiente.
 
-Librerías, documentación y fuentes usadas para el desarrollo
+## Librerías, documentación y fuentes usadas para el desarrollo
 
 ## Descripción del proyecto
 
@@ -15,13 +15,13 @@ Desarrollar una aplicación web sencilla que permita a un usuario calcular de ma
 
 ## Capturas de pantalla
 
+![Visual de la pagina](images/Pagina.png)
 ![Formulario](images/Formulario.png)
 ![Resultado](images/Resultado.png)
-![Visual de la pagina](images/Pagina.png)
 
 ## Instalación y ejecución
 
-1. Clonar el repositorio: `git clone <repo-url>`
+1. Clonar el repositorio: `git clone https://github.com/Yairrme/CarbonoITS-.git`
 2. Abrir `index.html` en navegador.
 3. Opcional: usar Live Server en VSCode para refresco automático.
 
