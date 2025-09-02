@@ -1,302 +1,52 @@
-/* Importar fuente moderna */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Variables CSS para consistencia */
-:root {
-  --primary-blue: #1d4ed8;
-  --primary-green: #10b981;
-  --accent-green: #34d399;
-  --purple-text: #581c87;
-  --gray-light: #f8fafc;
-  --gray-medium: #64748b;
-  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Reset y configuración base */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo general del body */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  min-height: 100vh;
+
 }
 
-/* Mejoras para el header */
-header {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, #2563eb 100%);
-  box-shadow: var(--shadow-medium);
-  position: relative;
+/* Encabezados */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #222;
 }
 
-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+/* Contenedor principal */
+main {
+  display: flex;
+  gap: 20px;
 }
 
-nav h1 {
-  font-size: 1.5rem;
-  background: linear-gradient(45deg, var(--accent-green), #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.3));
+/* Sección principal */
+section {
+  flex: 3;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-nav ul li a {
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
-nav ul li a:hover {
-  background: rgba(52, 211, 153, 0.1);
-  transform: translateY(-1px);
-}
-
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--accent-green);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-nav ul li a:hover::after {
-  width: 80%;
-}
-
-/* Mejoras para la sección hero */
-section h2 {
-  background: linear-gradient(135deg, #1f2937 0%, var(--purple-text) 50%, var(--primary-blue) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-section p {
-  color: var(--gray-medium);
-  font-weight: 400;
-  margin-bottom: 2rem;
-}
-
-/* Mejoras para las tarjetas principales */
-.bg-white {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.bg-white:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-large);
-  border-color: rgba(52, 211, 153, 0.2);
-}
-
-/* Mejoras para títulos */
-.text-purple-900 {
-  color: var(--purple-text) !important;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.text-purple-900::before {
-  content: '';
-  position: absolute;
-  left: -1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 60%;
-  background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-  border-radius: 2px;
-}
-
-/* Mejoras para botones */
-button {
-  position: relative;
-  overflow: hidden;
-  font-weight: 600;
-  letter-spacing: 0.025em;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
-  cursor: pointer;
-}
-
-.bg-green-500 {
-  background: linear-gradient(135deg, var(--primary-green) 0%, #059669 100%);
-  box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
-}
-
-.bg-green-500:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px 0 rgba(16, 185, 129, 0.5);
-}
-
-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.6s;
-}
-
-button:hover::before {
-  left: 100%;
-}
-
-/* Mejoras para el contenedor de imágenes */
+/* Aside (columna derecha) */
 aside {
-  position: relative;
+  flex: 2;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 5, 1, );
 }
 
-aside::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
-  right: -1rem;
-  bottom: -1rem;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
-  border-radius: 2rem;
-  z-index: -1;
-}
-
-.grid img {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 3px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, var(--primary-green), var(--primary-blue)) border-box;
-}
-
-.grid img:hover {
-  transform: scale(1.1) rotate(2deg);
-  box-shadow: var(--shadow-large);
-  filter: brightness(1.1) saturate(1.2);
-  z-index: 10;
-  position: relative;
-}
-
-.grid img:nth-child(even):hover {
-  transform: scale(1.1) rotate(-2deg);
-}
-
-/* Agregar un marco contenedor para las imágenes */
-.grid {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: var(--shadow-soft);
-  position: relative;
-  overflow: hidden;
-}
-
-.grid::before {
-  content: '🖼️ Galería Ambiental';
-  position: absolute;
-  top: 0.75rem;
-  left: 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--gray-medium);
-}
-
-/* Mejoras para el footer */
-footer {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, #1e40af 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
-}
-
-/* Efectos adicionales */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-nav h1 span:first-child {
-  display: inline-block;
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Responsive mejoras */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
+/* Imágenes del resumen */
+aside img {
   
-  section h2 {
-    font-size: 2.5rem;
-  }
-  
-  .grid {
-    gap: 1rem;
-    padding: 1.5rem;
-  }
-  
-  .grid img {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-  }
-}
-
-/* Efectos de carga suave */
-main > * {
-  animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-main > *:nth-child(1) { animation-delay: 0.1s; }
-main > *:nth-child(2) { animation-delay: 0.2s; }
-main > *:nth-child(3) { animation-delay: 0.3s; }
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
