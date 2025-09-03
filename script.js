@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Valores de ejemplo para cada opción de la calculadora.
-    // **NOTA:** Estos factores de emisión son aproximados y deben ser ajustados con datos más precisos.
-    // He ajustado la estructura para facilitar el cálculo por categoría para el gráfico.
+    // Valores de cada opción de la calculadora.
     const FACTORES_EMISION = {
         hogarEnergia: {
-            base: 0.5, // Factor base para la categoría
+            base: 0.5, 
             electricidad: {
                 "0-100 kWh": 0.04,
                 "101-300 kWh": 0.12,
@@ -12,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Más de 500 kWh": 0.45,
             },
             energiasRenovables: {
-                "Sí": -0.5, // Impacto negativo en la huella
+                "Sí": -0.5, 
                 "No": 0,
             },
             tipoVivienda: {
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
         transporte: {
-            base: 0.8, // Factor base para la categoría
+            base: 0.8, 
             tipoVehiculo: {
                 "coche": 0.8,
                 "moto": 0.5,
@@ -57,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
         consumoHabitos: {
-            base: 0.6, // Factor base para la categoría
+            base: 0.6, 
             carneRoja: {
                 "varias veces a la semana": 1.5,
                 "una vez a la semana": 0.8,
@@ -70,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Más de 4 veces": 0.8,
             },
             reciclaje: {
-                "siempre": -0.2, // Impacto negativo, reduce la huella
+                "siempre": -0.2, 
                 "a veces": 0.1,
                 "nunca": 0.3,
             },
@@ -82,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
         residuos: {
-            base: 0.3, // Factor base para la categoría
+            base: 0.3, 
             reciclajeHogar: {
                 "Siempre": -0.2,
                 "A veces": 0.1,
@@ -96,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let myChart; // Variable para almacenar la instancia del gráfico
 
     function crearCalculadora() {
-        // Inyectamos el HTML del formulario en la página con las nuevas preguntas.
+        // Inyectamos el HTML del formulario en la página para las preguntas.
         articulo.innerHTML = `
             <h2 class="font-bold text-xl text-purple-900 mb-3">Calcula tu huella de carbono</h2>
             <p class="text-gray-700 leading-relaxed mb-5">
@@ -193,28 +191,25 @@ document.addEventListener("DOMContentLoaded", () => {
             let huellaResiduos = FACTORES_EMISION.residuos.base +
                 FACTORES_EMISION.residuos.reciclajeHogar[reciclajeHogarValor];
             
-            // Asegurarse de que ningún factor de categoría sea negativo para el gráfico,
-            // ya que un valor negativo en el gráfico circular no tiene un significado visual claro
+            // Esto para que ninguna categoria se muestre negativa en el grafico
             huellaHogarEnergia = Math.max(0, huellaHogarEnergia);
             huellaTransporte = Math.max(0, huellaTransporte);
             huellaConsumoHabitos = Math.max(0, huellaConsumoHabitos);
             huellaResiduos = Math.max(0, huellaResiduos);
 
-
-            const huellaTotal = (
-                huellaHogarEnergia +
-                huellaTransporte +
-                huellaConsumoHabitos +
-                huellaResiduos
-            ).toFixed(2);
+            huellaTotal = (huellaHogarEnergia + huellaTransporte + huellaConsumoHabitos + huellaResiduos).toFixed(2);
+            
+            console.log("--- Huella por Categoría (toneladas de Co2) ---");
+            console.log("Hogar y Energía:", huellaHogarEnergia.toFixed(2));
+            console.log("Transporte:", huellaTransporte.toFixed(2));
+            console.log("Consumo y Hábitos:", huellaConsumoHabitos.toFixed(2));
+            console.log("Residuos:", huellaResiduos.toFixed(2));
+            console.log("--- Resultado Final ---");
+            console.log("Huella de Carbono Total:", huellaTotal, "toneladas de Co2 por Año");
+            console.log("-----------------------");
 
             document.getElementById("huella-total").textContent = huellaTotal;
             document.getElementById("resultado").classList.remove("hidden");
-
-            // Destruir el gráfico existente si lo hay para evitar duplicados
-            if (myChart) {
-                myChart.destroy();
-            }
 
             // Crear el gráfico circular
             const ctx = document.getElementById('huellaChart').getContext('2d');
@@ -246,13 +241,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false, // Permitir que el tamaño sea controlado por el contenedor
+                    maintainAspectRatio: false, // Permite que el tamaño sea controlado por el contenedor
                     plugins: {
                         legend: {
                             position: 'top',
                             labels: {
                                 font: {
-                                    size: 10 // Tamaño de fuente para las etiquetas de la leyenda
+                                    size: 10 
                                 }
                             }
                         },
@@ -265,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     }
                                     if (context.parsed !== null) {
                                         const value = parseFloat(context.parsed.toFixed(2));
-                                        // Asegurarse de que huellaTotal sea un número para el cálculo del porcentaje
+                                        // Esto hace que huellaTotal sea un número para el cálculo del porcentaje
                                         const total = parseFloat(huellaTotal);
                                         const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
                                         label += value + ' tCO2e (' + percentage + '%)';
@@ -301,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("huella-total").textContent = "0.00";
             document.getElementById("resultado").classList.add("hidden");
 
-            // Destruir el gráfico al reiniciar el formulario
+            // Logica para borrar el grafico para evitar duplicados
             if (myChart) {
                 myChart.destroy();
             }
@@ -311,22 +306,19 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("boton-volver").addEventListener("click", () => {
             articulo.innerHTML = contenidoOriginal;
             asignarEventoCalcular();
-            // Destruir el gráfico al volver a la página principal
-            if (myChart) {
-                myChart.destroy();
-            }
         });
     }
 
-    // Esta función asigna el uso del botón Calcular huella.
-function asignarEventoCalcular() {
-    const botonCalcularHuella = document.getElementById("btnCalcularHuella");
-    if (botonCalcularHuella) {
-        botonCalcularHuella.addEventListener("click", crearCalculadora);
+    // Esto es para que reconozca cuando presiones el boton "calcular mi huella"
+    function asignarEventoCalcular() {
+        const botonCalcularHuella = document.getElementById("btnCalcularHuella");
+        if (botonCalcularHuella) {
+            botonCalcularHuella.addEventListener("click", crearCalculadora);
+        }
     }
-}
-    // --- Lógica del Modal de Consejos (NUEVO) ---
-const btnSolicitaInformacion = document.getElementById('btnSolicitaInformacion');
+
+    
+    const btnSolicitaInformacion = document.getElementById('btnSolicitaInformacion');
     const consejosModal = document.getElementById('consejosModal');
     const btnSi = document.getElementById('btnSi');
     const btnNo = document.getElementById('btnNo');
@@ -366,7 +358,8 @@ const btnSolicitaInformacion = document.getElementById('btnSolicitaInformacion')
             ocultarConsejosModal();
         });
     }
-
+    
+    // Llamada inicial para asignar el evento al botón original al cargar la página
     asignarEventoCalcular();
 });
 
