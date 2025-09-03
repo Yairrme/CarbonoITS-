@@ -20,6 +20,7 @@ h1, h2, h3 {
 /* Contenedor principal */
 main {
   display: flex;
+  center
   gap: 20px;
 }
 
@@ -34,7 +35,7 @@ section {
 
 /* Aside (columna derecha) */
 aside {
-  flex: 2;
+  flex: 3;
   background: #ffffff;
   padding: 10px;
   border-radius: 50px;
