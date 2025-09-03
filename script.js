@@ -172,6 +172,49 @@ document.addEventListener("DOMContentLoaded", () => {
       botonCalcularHuella.addEventListener("click", crearCalculadora);
     }
   }
+  // --- Lógica del Modal de Consejos (NUEVO) ---
+    const btnSolicitaInformacion = document.querySelector('div.bg-white button'); 
+    const consejosModal = document.getElementById('consejosModal');
+    const btnSi = document.getElementById('btnSi');
+    const btnNo = document.getElementById('btnNo');
+
+    // Función para mostrar el modal
+    function mostrarConsejosModal() {
+        if (consejosModal) {
+            consejosModal.classList.remove('hidden');
+            consejosModal.classList.add('flex');
+        }
+    }
+
+    // Función para ocultar el modal
+    function ocultarConsejosModal() {
+        if (consejosModal) {
+            consejosModal.classList.add('hidden');
+            consejosModal.classList.remove('flex');
+        }
+    }
+
+    // Event listener para el botón "Solicita información"
+    if (btnSolicitaInformacion) {
+        btnSolicitaInformacion.addEventListener('click', mostrarConsejosModal);
+    }
+
+    // Event listeners para los botones "Sí" y "No" dentro del modal
+    if (btnSi) {
+        btnSi.addEventListener('click', () => {
+            alert('¡Gracias por tu valoración! Nos alegra que te haya sido útil.');
+            ocultarConsejosModal();
+        });
+    }
+
+    if (btnNo) {
+        btnNo.addEventListener('click', () => {
+            alert('¡Lamentamos que no te haya sido útil! Trabajaremos para mejorar.');
+            ocultarConsejosModal();
+        });
+    }
+
+
 
   // Iniciamos el script llamando a la función por primera vez.
   asignarEventoCalcular();

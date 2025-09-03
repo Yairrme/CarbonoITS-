@@ -1,4 +1,4 @@
-# CarbonoITS-
+# CarbonoITS
 
 ## ¿Qué es la huella de carbono personal?
 
@@ -8,6 +8,18 @@ Estas actividades pueden incluir el consumo de energía en el hogar, el transpor
 Conocer nuestra huella puede ayudarnos a comprender mejor nuestras propias acciones y hábitos y a tomar medidas para reducir nuestras emisiones y minimizar nuestro impacto en el medio ambiente.
 
 ## Librerías, documentación y fuentes usadas para el desarrollo
+
+### 📚 Librerías y frameworks
+
+- Tailwind CSS → usado para la maquetación, estilos responsivos, sombras, bordes y soporte de modo oscuro.
+- JavaScript Vanilla (DOM API) → para generar dinámicamente el formulario, manejar eventos de botones, calcular la huella y mostrar resultados.
+- HTML5 y CSS3 → estructura semántica y estilos básicos complementarios a Tailwind.
+
+### 📖 Documentación técnica consultada
+
+- [MDN Web Docs](https://developer.mozilla.org/es/) → referencias de JavaScript, manejo del DOM y eventos.
+- [W3Schools](https://www.w3schools.com/) → ejemplos de HTML5 y CSS3.
+- [Documentación oficial de Tailwind](https://tailwindcss.com/docs) → clases utilitarias y configuración de responsividad/modo oscuro.
 
 ## Descripción del proyecto
 
@@ -38,13 +50,13 @@ Desarrollar una aplicación web sencilla que permita a un usuario calcular de ma
 https://www.nationalgeographicla.com/medio-ambiente/que-es-huella-de-carbono-como-se-mide
 https://atlas-greenenergy.com/es/que-es-la-huella-de-carbono-personal
 
-Licencia MIT
+## Licencia MIT
 
 Copyright (c) [2025]
 [Yair Melinguer,Lucas Duran,Franco Seguel]
 
 Por la presente se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia
-de este software y de los archivos de documentación asociados (CarbonoITS-), para
+de este software y de los archivos de documentación asociados (CarbonoITS), para
 utilizarlo sin restricciones, incluyendo sin limitación los derechos a usar, copiar,
 modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender
 copias del Software, y para permitir a las personas a las que se les proporcione el
