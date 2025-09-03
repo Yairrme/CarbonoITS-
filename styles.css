@@ -20,7 +20,7 @@ h1, h2, h3 {
 /* Contenedor principal */
 main {
   display: flex;
-  center
+  
   gap: 20px;
 }
 
