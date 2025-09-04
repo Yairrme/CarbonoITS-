@@ -25,6 +25,50 @@ Desarrollar una aplicación web sencilla que permita a un usuario calcular de ma
 
 ## Capturas de pantalla
 
+![HTML](images/CodigoHTML.png)
+Estructura de la página
+El código define la estructura básica de la web:
+
+<head>: Enlaza archivos externos esenciales para el funcionamiento y el diseño, como Tailwind CSS para los estilos, Chart.js para crear gráficos, y archivos locales como script.js y styles.css que contienen la lógica y estilos adicionales.
+<header>: Contiene la barra de navegación, que incluye el logo, enlaces a secciones, un botón para abrir el modal "¿Quiénes somos?" y un interruptor para activar el modo oscuro 🌙.
+<main>: Es el contenedor principal del contenido. Se divide en dos secciones principales:
+Una sección más grande (md:col-span-2) que contiene artículos informativos sobre la huella de carbono y botones interactivos.
+Una barra lateral (<aside>) que muestra imágenes relacionadas con el tema.
+<footer>: Contiene la información de la empresa o institución (Instituto Técnico Superior Cipolletti) y avisos de derechos de autor.
+<script>: Incluye un script de JavaScript que gestiona la funcionalidad del modo oscuro y guarda la preferencia del usuario en el navegador (localStorage).
+
+Estilo y diseño
+El diseño de la página se basa en la librería Tailwind CSS, que utiliza clases como bg-white, shadow, flex, y p-6 para controlar el espaciado, los colores, las sombras y la disposición de los elementos. Esto permite crear una interfaz moderna y adaptable sin escribir CSS personalizado desde cero.
+
+Interactividad y funcionalidad
+El código HTML se integra con JavaScript para ofrecer varias funciones:
+
+Modales: Define un modal (<div id="modal">) que se muestra u oculta al hacer clic en el botón "¿Quiénes somos?", proporcionando información sobre los desarrolladores.
+
+Botones: Hay varios botones, como "Solicita información" y "Calcular mi huella", que probablemente activan funcionalidades definidas en el archivo script.js (como mostrar un formulario o ejecutar los cálculos).
+
+Modo Oscuro: El botón con los íconos del sol ☀️ y la luna 🌙 permite al usuario cambiar el tema de la página, mejorando la experiencia visual según sus preferencias.
+
+Enlaces: Los enlaces de navegación (<a>) facilitan el desplazamiento a diferentes secciones de la página.
+
+![Calculadora](images/CodigoCalculadora.png)
+
+Recopilación de datos
+El código utiliza document.getElementById() para obtener los valores de diferentes elementos de un formulario HTML (probablemente campos de entrada o menús desplegables). Estos valores se almacenan en constantes como electricidadValor, vuelosValor, carneRojaValor, etc.
+
+Cálculo de la huella por categoría
+Después de recopilar los datos, el script calcula la huella de carbono de forma separada para cuatro categorías principales:
+
+Energía del hogar (huellaHogarEnergia): Suma las emisiones base con las de electricidad, energías renovables, tipo de vivienda y fuente de calefacción.
+Transporte (huellaTransporte): Combina las emisiones base con las del tipo de vehículo, kilómetros recorridos, combustible y vuelos.
+Consumo y hábitos (huellaConsumoHabitos): Suma las emisiones base con las de consumo de carne roja, comida fuera, reciclaje de materiales y lácteos.
+Residuos (huellaResiduos): Calcula la huella de carbono a partir de un valor base y el reciclaje en el hogar.
+
+Ajuste de valores y cálculo total
+El script utiliza Math.max(0, ...) para asegurarse de que ninguna de las categorías de la huella de carbono tenga un valor negativo, lo cual es útil para evitar errores al mostrar los datos en un gráfico.
+
+Finalmente, el código suma todas las categorías para obtener la huella de carbono total (huellaTotal) y formatea el resultado para que tenga dos decimales usando .toFixed(2)
+
 ![Visual de la pagina](images/Pagina.png)
 ![Formulario](images/Formulario.png)
 ![Resultado](images/Resultado.png)
