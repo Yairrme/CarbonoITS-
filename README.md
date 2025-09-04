@@ -25,6 +25,24 @@ Desarrollar una aplicación web sencilla que permita a un usuario calcular de ma
 
 ## Capturas de pantalla
 
+![Visual de la pagina](images/Pagina.png)
+![Formulario](images/Formulario.png)
+![Resultado](images/Resultado.png)
+
+## Instalación y ejecución
+
+1. Clonar el repositorio: `git clone https://github.com/Yairrme/CarbonoITS-.git`
+2. Abrir `index.html` en navegador.
+3. Opcional: usar Live Server en VSCode para refresco automático.
+
+## Uso
+
+- Completar el formulario con tus hábitos.
+- Presionar "Calcular" para ver tu huella.
+- Reiniciar o volver al contenido principal si lo deseas.
+
+## Fragmentos de código clave
+
 ![HTML](images/CodigoHTML.png)
 
 Estructura de la página
@@ -74,24 +92,6 @@ Ajuste de valores y cálculo total
 El script utiliza Math.max(0, ...) para asegurarse de que ninguna de las categorías de la huella de carbono tenga un valor negativo, lo cual es útil para evitar errores al mostrar los datos en un gráfico.
 
 Finalmente, el código suma todas las categorías para obtener la huella de carbono total (huellaTotal) y formatea el resultado para que tenga dos decimales usando .toFixed(2)
-
-![Visual de la pagina](images/Pagina.png)
-![Formulario](images/Formulario.png)
-![Resultado](images/Resultado.png)
-
-## Instalación y ejecución
-
-1. Clonar el repositorio: `git clone https://github.com/Yairrme/CarbonoITS-.git`
-2. Abrir `index.html` en navegador.
-3. Opcional: usar Live Server en VSCode para refresco automático.
-
-## Uso
-
-- Completar el formulario con tus hábitos.
-- Presionar "Calcular" para ver tu huella.
-- Reiniciar o volver al contenido principal si lo deseas.
-
-## Fragmentos de código clave
 
 ## Referencias
 
