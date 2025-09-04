@@ -26,16 +26,22 @@ Desarrollar una aplicación web sencilla que permita a un usuario calcular de ma
 ## Capturas de pantalla
 
 ![HTML](images/CodigoHTML.png)
+
 Estructura de la página
 El código define la estructura básica de la web:
 
-<head>: Enlaza archivos externos esenciales para el funcionamiento y el diseño, como Tailwind CSS para los estilos, Chart.js para crear gráficos, y archivos locales como script.js y styles.css que contienen la lógica y estilos adicionales.
-<header>: Contiene la barra de navegación, que incluye el logo, enlaces a secciones, un botón para abrir el modal "¿Quiénes somos?" y un interruptor para activar el modo oscuro 🌙.
-<main>: Es el contenedor principal del contenido. Se divide en dos secciones principales:
+head: Enlaza archivos externos esenciales para el funcionamiento y el diseño, como Tailwind CSS para los estilos, Chart.js para crear gráficos, y archivos locales como script.js y styles.css que contienen la lógica y estilos adicionales.
+
+header: Contiene la barra de navegación, que incluye el logo, enlaces a secciones, un botón para abrir el modal "¿Quiénes somos?" y un interruptor para activar el modo oscuro 🌙.
+
+main: Es el contenedor principal del contenido. Se divide en dos secciones principales:
+
 Una sección más grande (md:col-span-2) que contiene artículos informativos sobre la huella de carbono y botones interactivos.
-Una barra lateral (<aside>) que muestra imágenes relacionadas con el tema.
-<footer>: Contiene la información de la empresa o institución (Instituto Técnico Superior Cipolletti) y avisos de derechos de autor.
-<script>: Incluye un script de JavaScript que gestiona la funcionalidad del modo oscuro y guarda la preferencia del usuario en el navegador (localStorage).
+Una barra lateral (aside) que muestra imágenes relacionadas con el tema.
+
+footer: Contiene la información de la empresa o institución (Instituto Técnico Superior Cipolletti) y avisos de derechos de autor.
+
+script: Incluye un script de JavaScript que gestiona la funcionalidad del modo oscuro y guarda la preferencia del usuario en el navegador (localStorage).
 
 Estilo y diseño
 El diseño de la página se basa en la librería Tailwind CSS, que utiliza clases como bg-white, shadow, flex, y p-6 para controlar el espaciado, los colores, las sombras y la disposición de los elementos. Esto permite crear una interfaz moderna y adaptable sin escribir CSS personalizado desde cero.
@@ -43,7 +49,7 @@ El diseño de la página se basa en la librería Tailwind CSS, que utiliza clase
 Interactividad y funcionalidad
 El código HTML se integra con JavaScript para ofrecer varias funciones:
 
-Modales: Define un modal (<div id="modal">) que se muestra u oculta al hacer clic en el botón "¿Quiénes somos?", proporcionando información sobre los desarrolladores.
+Modales: Define un modal (div id="modal") que se muestra u oculta al hacer clic en el botón "¿Quiénes somos?", proporcionando información sobre los desarrolladores.
 
 Botones: Hay varios botones, como "Solicita información" y "Calcular mi huella", que probablemente activan funcionalidades definidas en el archivo script.js (como mostrar un formulario o ejecutar los cálculos).
 
