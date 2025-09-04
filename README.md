@@ -7,23 +7,21 @@ La huella de carbono personal se refiere a la cantidad total de emisiones de gas
 Estas actividades pueden incluir el consumo de energía en el hogar, el transporte, la alimentación, la ropa, los productos de consumo y otros aspectos de la vida diaria.
 Conocer nuestra huella puede ayudarnos a comprender mejor nuestras propias acciones y hábitos y a tomar medidas para reducir nuestras emisiones y minimizar nuestro impacto en el medio ambiente.
 
-## Librerías, documentación y fuentes usadas para el desarrollo
+## Descripción del proyecto
 
-### 📚 Librerías y frameworks
+Desarrollar una aplicación web sencilla que permita a un usuario calcular de manera básica su huella de carbono personal y un apartado para comparar el impacto de ir al trabajo en coche vs. en transporte público (o bicicleta). mostrando la cantidad de CO2 que se ahorra al elegir el transporte público o la bicicleta en lugar del coche.
+
+### Librerías y frameworks
 
 - Tailwind CSS → usado para la maquetación, estilos responsivos, sombras, bordes y soporte de modo oscuro.
 - JavaScript Vanilla (DOM API) → para generar dinámicamente el formulario, manejar eventos de botones, calcular la huella y mostrar resultados.
 - HTML5 y CSS3 → estructura semántica y estilos básicos complementarios a Tailwind.
 
-### 📖 Documentación técnica consultada
+### Documentación técnica consultada
 
 - [MDN Web Docs](https://developer.mozilla.org/es/) → referencias de JavaScript, manejo del DOM y eventos.
 - [W3Schools](https://www.w3schools.com/) → ejemplos de HTML5 y CSS3.
 - [Documentación oficial de Tailwind](https://tailwindcss.com/docs) → clases utilitarias y configuración de responsividad/modo oscuro.
-
-## Descripción del proyecto
-
-Desarrollar una aplicación web sencilla que permita a un usuario calcular de manera básica su huella de carbono personal y un apartado para comparar el impacto de ir al trabajo en coche vs. en transporte público (o bicicleta). mostrando la cantidad de CO2 que se ahorra al elegir el transporte público o la bicicleta en lugar del coche.
 
 ## Capturas de pantalla
 

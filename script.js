@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Inyectamos el HTML del formulario en la página para las preguntas.
         articulo.innerHTML = `
             <h2 class="font-bold text-xl text-purple-900 mb-3">Calcula tu huella de carbono</h2>
-            <p class="text-gray-700 leading-relaxed mb-5">
+            <p class="text-gray-700 leading-relaxed mb-5 dark:text-white">
                 Responde las siguientes preguntas para estimar tu huella de carbono personal.
             </p>
             <div id="calculadora-form" class="space-y-6">
